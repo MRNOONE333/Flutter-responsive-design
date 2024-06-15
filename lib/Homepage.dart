@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+
+import 'ResponsiveLayout.dart';
+import 'desktopBody.dart';
+import 'mobileBody.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,8 +15,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return  Placeholder();
-
+    return  Scaffold(
+      body: ResponsiveLayout(
+        desktopBody : MydesktopBody(),
+        mobileBody : MymobileBody(),
+      ),
+    );
   }
 }
 
